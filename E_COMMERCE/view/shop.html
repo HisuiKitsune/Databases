@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Criado por Team Senac First Craker's">
+
+	<!-- title -->
+	<title>Loja</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="./assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="./assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="./assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="./assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="./assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="./assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="./assets/css/responsive.css">
+
+</head>
+
+<body>
+
+	<!--PreLoader-->
+	<div class="loader">
+		<div class="loader-inner">
+			<div class="circle"></div>
+		</div>
+	</div>
+	<!--PreLoader Ends-->
+
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="assets/img/logo.png" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="index.html">Início</a>
+								</li>
+								<li><a href="about.html">Sobre</a></li>
+								<ul class="sub-menu">
+									<li><a href="404.html">404 página</a></li>
+									<li><a href="about.html">Sobre</a></li>
+									<li><a href="cart.html">Carrinho</a></li>
+									<li><a href="checkout.html">Confirmar</a></li>
+									<li><a href="news.html">Novidades</a></li>
+									<li><a href="shop.html">Loja</a></li>
+									<li><a href="contact.html">Contato</a></li>
+								</ul>
+								</li>
+								<li><a href="news.html">Novidades</a>
+									<ul class="sub-menu">
+										<li><a href="news.html">Novidades</a></li>
+										<li><a href="single-news.html">Ultimas Notícias</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">Contato</a></li>
+								<li><a href="shop.html">Loja</a>
+									<ul class="sub-menu">
+										<li><a href="shop.html">Loja</a></li>
+										<li><a href="checkout.html">Confirmar</a></li>
+										<li><a href="single-product.html">Produto Especial</a></li>
+										<li><a href="cart.html">Carrinho</a></li>
+									</ul>
+								</li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="cart.html"><i
+												class="fas fa-shopping-cart"></i></a>
+										<a class="mobile-hide search-bar-icon" href="#"><i
+												class="fas fa-search"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Pesquisar Por:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Pesquisar <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search arewa -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Sustentável e Orgânico</p>
+						<h1>Loja</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- products -->
+	<div class="product-section mt-150 mb-150">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="product-filters">
+						<ul>
+							<li class="active" data-filter="*">Tudo</li>
+							<li data-filter=".strawberry">Bonés</li>
+							<li data-filter=".berry">Camisas</li>
+							<li data-filter=".lemon">Calças</li>
+							<li data-filter=".lemon">Sapatos</li>
+							<li data-filter=".lemon">Carteiras</li>
+							<li data-filter=".lemon">Acessórios</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="row product-lists">
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/BONÉ2a.png" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Boné Thrasher Preto</h3>
+						<p class="product-price"><span>Unidade</span> R$ 55,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center berry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/CAMISAS1a.png" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Camisa SK8 Branca</h3>
+						<p class="product-price"><span>Unidade</span> R$ 90,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center lemon">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/CALÇA4a.png" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Calça DC Cargo </h3>
+						<p class="product-price"><span>Unidade</span> R$ 180,20 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/Qixa.png" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Tênis de Skate Qix Branco</h3>
+						<p class="product-price"><span>Unidade</span> R$ 210,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/product-1.jpg" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Tênis de Skate Qix Sport</h3>
+						<p class="product-price"><span>Unidade</span> R$ 190,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/product-3.jpg" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Sapatênis Caballero Social</h3>
+						<p class="product-price"><span>Unidade</span> R$ 298,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/product-2.jpg" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Camisa URGH Social</h3>
+						<p class="product-price"><span>Unidade</span> R$ 188,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/product-4.jpg" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Moletom Venture Marrom</h3>
+						<p class="product-price"><span>Unidade</span> R$ 208,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/product-12.jpg" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Moletom Venture Camuflado</h3>
+						<p class="product-price"><span>Unidade</span> R$ 218,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/shapeprom0.png" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Shape Zero Maple Thomas</h3>
+						<p class="product-price"><span>Unidade</span> R$ 279,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/shapeprom8.png" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Shape Maple Creature 8.25</h3>
+						<p class="product-price"><span>Unidade</span> R$ 268,90 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/shapepro6.png" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Shape 5boro Letterpress 8.23</h3>
+						<p class="product-price"><span>Unidade</span> R$ 118,90 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/CARTEIRAa.png" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Carteira Santa Cruz</h3>
+						<p class="product-price"><span>Unidade</span> R$ 150,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/CORRENTE.jpg" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Corrente com Pingente Skate</h3>
+						<p class="product-price"><span>Unidade</span> R$ 200,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/trucks2.webp" alt=""></a>
+							<ul class="action">
+								<li><i class="fa-solid fa-heart"></i>
+									<span>Lista de Desejos</span>
+								</li>
+								<li><i class="fa-solid fa-cart-shopping"></i>
+									<span>Adicione ao Carrinho</span>
+								</li>
+								<li><i class="fa-solid fa-eye"></i>
+									<span>Veja os Detalhes</span>
+								</li>
+							</ul>
+						</div>
+						<h3>Truck Fun Light 139MM</h3>
+						<p class="product-price"><span>2 Unidades</span> R$ 168,00 </p>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao
+							carrinho</a>
+						<div class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="pagination-wrap">
+						<ul>
+							<li><a href="#">Prev</a></li>
+							<li><a href="#">1</a></li>
+							<li><a class="active" href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end products -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="assets/img/company DC.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company Thrasher.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company Baker.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company BonesBrigade.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company powellperalta.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company Venture.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">Sobre nós</h2>
+						<p>Skate Cracker's Club nasceu com o intuito de oferecer o melhor do skate para praticantes e
+							simpatizantes do estilo de vida de muitos brasileiros. com uma grande variedade de produtos
+							nacionais e importados, oferecemos produtos de primeira linha para garantia de evolução
+							constante sobre o carrinho.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Entre em Contato</h2>
+						<ul>
+							<li>Rua Pompeu Loureiro, 45 - Copacabana, Rio de Janeiro - RJ</li>
+							<li>SkateCracker@gmail.com</li>
+							<li>(21) 2252 2533/(21) 9952633-73</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Páginas</h2>
+						<ul>
+							<li><a href="index.html">Início</a></li>
+							<li><a href="about.html">Sobre</a></li>
+							<li><a href="services.html">Shop</a></li>
+							<li><a href="news.html">Novidades</a></li>
+							<li><a href="contact.html">Contato</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Inscreva-se</h2>
+						<p>Inscreva-se em nossa lista de e-mails para receber as atualizações mais recentes.</p>
+						<input type="email" placeholder="Email">
+						<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2022 - <a href="https://www.senac.br/">Team Senac First Craker's</a> - Todos os
+						direitos reservados.</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+
+	<!-- jquery -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
