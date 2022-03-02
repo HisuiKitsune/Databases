@@ -1,0 +1,105 @@
+#band {
+  padding: 120px 0 0;
+}
+.box5 {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  margin-bottom: 20px;
+  background: url(../img/Back_hexa.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box5:hover {
+  transform: translateY(-30px);
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+}
+.box5 .imgBox8 {
+  position: relative;
+}
+.box5 .imgBox8 img {
+  transition: 0.5s;
+}
+.box5:hover .imgBox8 img {
+  opacity: 0.5;
+  transform: translateY(-8px);
+}
+.box5 .content0 {
+  position: absolute;
+  bottom: -40px;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+}
+.box5:hover .content0 {
+  bottom: 0;
+  opacity: 1;
+}
+.box5 .content0 h3 {
+  font-size: 30px;
+  color: #051922;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+}
+.box5 .content0 p {
+  font-size: 18px;
+  color: #f28123;
+  font-weight: 400;
+}
+.box5 .content0 .btnD {
+  border: none;
+  font-size: 18px;
+  background: #f28123;
+  color: #051922;
+  padding: 10px 20px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.box5 .content0 .btnD:hover {
+  background: #051922;
+  color: #f28123;
+}
+.section-title h3 {
+  font-size: 3em;
+  position: relative;
+  padding-bottom: 15px;
+  color: #051922;
+  font-weight: 700;
+}
+.section-title h3 span {
+  color: #f28123;
+}
+
+.section-title h3:after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 50px;
+  height: 2px;
+  background-color: #f28123;
+  margin: 0 auto;
+}
+
+.section-title p {
+  font-size: 15px;
+  width: 530px;
+  margin: 0 auto;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
