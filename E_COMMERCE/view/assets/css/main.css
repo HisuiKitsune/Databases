@@ -4147,6 +4147,41 @@ table.order-details tbody td {
   margin-bottom: 50px;
 }
 
+.accord-button{
+  margin: auto;
+  display: block;
+  width: 800px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  background:#f28123;
+  color: white;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.accord-button::after{
+  content: '\25be';
+  float: right;
+  transform: scale(1.5);
+}
+
+.accord-button--active {background: #051922}
+.accord-button--active::after {content:'\25b4'}
+
+.accord-content {
+  margin: auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s;
+  width: 800px;
+  padding: 0 15px;
+  font-family: sans-serif;
+}
+
 @media (max-width: 767px) {
   .contentBox5 {
     width: 300px;

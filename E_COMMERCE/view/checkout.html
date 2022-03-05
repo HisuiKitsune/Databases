@@ -215,10 +215,8 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
-
 				<div class="col-lg-4">
 					<div class="order-details-wrap">
 						<table class="order-details">
@@ -275,7 +273,73 @@
 		</div>
 	</div>
 	<!-- end check out section -->
-
+	<!---start FAQ---->
+	<div class="container-fluid mb-5">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="section-title">
+					<h3><span class="orange-text"></span>F<span>A</span>Q</h3>
+					<p>Perguntas Frequentes.</p>
+				</div>
+			</div>
+		</div>
+	<div class="accordion">
+			<button type="button" class="accord-button">Como é calculado o frete para meu pedido?</button>
+		  <div class="accord-content">
+				<p>
+					O valor do frete é calculado automaticamente, a partir dos produtos selecionados e do CEP da entrega do Cliente. A informação do valor do frete já calculado para determinado endereço e determinados produtos aparece para o cliente no momento de finalização da Compra no site.
+				</p>
+			</div>
+		</div>
+	<div class="accordion">
+			<button type="button" class="accord-button">Consigo rastrear o minha Compra?</button>
+		  <div class="accord-content">
+				<p>
+					Sim. As informações mais atualizadas sobre sua Compra e a situação de entrega de sua Compra estão disponíveis em Meus pedidos. Além disso, você será notificado do andamento do seu pedido pelo e-mail cadastrado.
+				</p>
+			</div>
+		</div>
+	<div class="accordion">
+			<button type="button" class="accord-button">Posso adicionar outro produto à Compra que eu fiz?</button>
+		  <div class="accord-content">
+				<p>
+					Não, após finalizada, a Compra não poderá ser alterada. Para adquirir outro produto, você deverá iniciar uma nova Compra.
+				</p>
+			</div>
+		</div>
+	<div class="accordion">
+			<button type="button" class="accord-button">Não recebi todos os itens da minha Compra. O que faço?</button>
+		  <div class="accord-content">
+				<p>
+					Entre em contato com o nosso SAC Skate Cracker's Atendimentos pelo telefone (21) 2252 2533 ou pelos outros meios de atendimento disponibilizados.
+				</p>
+			</div>
+		</div>
+	<div class="accordion">
+			<button type="button" class="accord-button">Posso efetuar uma Compra no site com CNPJ?</button>
+		  <div class="accord-content">
+				<p>
+					Neste momento, não estamos trabalhando com esta opção. Apenas pessoas físicas podem se cadastrar no site e efetuar Compras. A aquisição de produtos por meio de CNPJ pode ser feito através do e-mail SkateCracker@gmail.com.
+				</p>
+			</div>
+		</div>
+	<div class="accordion">
+			<button type="button" class="accord-button"> Como faço para confirmar a disponibilidade de um produto no estoque?</button>
+		  <div class="accord-content">
+				<p>
+					No site, se houver carrinho de compras visível no momento da finalização do pedido, significa que há estoque do produto.
+				</p>
+			</div>
+		</div>
+	<div class="accordion">
+			<button type="button" class="accord-button">Posso alterar o endereço da entrega?</button>
+		  <div class="accord-content">
+				<p>
+					Sim, mas somente antes de concluir a Compra no site. Depois de finalizada, a Compra não pode mais ser alterada. Em caso de dúvida, entre em contato com o SAC Skate Cracker's Atendimentos pelo telefone (21) 2252 2533 ou pelos outros meios de atendimento disponibilizados.
+				</p>
+			</div>
+		</div>
+	</div>
 	<!-- logo carousel -->
 	<div class="logo-carousel-section">
 		<div class="container">
@@ -415,6 +479,22 @@
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
 
-</body>
+	<script>
+		document.querySelectorAll('.accord-button').forEach(button => {
+			button.addEventListener('click', () => {
+				const accordContent = button.nextElementSibling;
 
+				button.classList.toggle('accord-button--active');
+
+				if (button.classList.contains('accord-button--active')) {
+					accordContent.style.maxHeight = accordContent.scrollHeight + 'px';
+				} else {
+					accordContent.style.maxHeight = 0;
+				}
+			});
+		});
+
+	</script>
+
+</body>
 </html>
