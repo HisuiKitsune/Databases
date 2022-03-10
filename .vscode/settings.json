@@ -10,7 +10,7 @@
             "askForPassword": true,
             "driver": "MariaDB",
             "name": "aula_db",
-            "database": "loja_skate",
+            "database": "SkateClub",
             "username": "root"
         }
     ]
