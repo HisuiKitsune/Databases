@@ -1,0 +1,30 @@
+cliente login
+
+Nome
+CPF
+CEP
+LGR
+Bairro <- drop down list (linked to id_bairro)
+
+------------------
+
+Registro Produto
+
+Nome Produto
+Valor
+Quantidade
+Categoria <- drop down list (linked to id_categoria)
+
+------------------
+
+Registro Vendas
+
+Valor Venda
+CPF cliente
+id da venda (last_inserted_id)
+
+múltiplos campos ->
+{
+    id produto 
+    Quantidade do produto
+ }
