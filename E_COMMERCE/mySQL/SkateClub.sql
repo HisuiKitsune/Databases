@@ -6,8 +6,8 @@ use SkateClub;
 
 create table if not exists cliente
 (
-    id_cli int unique auto_increment,
-    cpf char(11) primary key not null,
+    id_cli int primary key unique auto_increment,
+    cpf char(11) not null,
     nome_cli varchar(50) not null
 );
 
@@ -29,10 +29,10 @@ create table if not exists endereco
 (
     id_endereco int primary key auto_increment,
     cep int not null,
-    lgr varchar(50),
-    cpf char(11) not null,
+    lgr int,
+    id_cli int not null,
     id_bairro int,
-    foreign key(cpf) references cliente(cpf) on delete cascade,
+    foreign key(id_cli) references cliente(id_cli) on delete cascade,
     foreign key(id_bairro) references bairro(id_bairro) on delete cascade
 );
 
@@ -57,8 +57,8 @@ create table if not exists vendas
     id_venda int primary key auto_increment,
     data_ven date default current_date,
     valor_ven int,
-    cpf char(11) not null,
-    foreign key (cpf) references cliente(cpf) on delete cascade
+    id_cli int not null,
+    foreign key (id_cli) references cliente(id_cli) on delete cascade
 );
 
 create table if not exists produto_venda
@@ -92,10 +92,10 @@ insert into cliente(cpf, nome_cli) values
 ('97894283754', 'Wilson');
 
 
-insert into endereco(cep, lgr, cpf, id_bairro) values
-(21170102, 1130, '17109786781', 1),
-(21650004, 2100, '83339449732', 4),
-(21041410, 300, '97894283754', 2);
+insert into endereco(cep, lgr, id_cli, id_bairro) values
+(21170102, 1130, 1, 1),
+(21650004, 2100, 2, 4),
+(21041410, 300, 3, 2);
 
 
 insert into categoria(nome_cat) values 
@@ -142,10 +142,10 @@ insert into produtos(nome_pro, valor_pro, qtd_pro, id_categoria) values
 ("Truck Fun Light 139mm", 168.00, 41, 3),
 ("Truck Fun Light Preto 139mm", 170.00, 29, 3);
 
-insert into vendas(valor_ven, cpf) values 
-(510.00, "17109786781"),
-(616.00, "83339449732"),
-(419.90, "97894283754");
+insert into vendas(valor_ven, id_cli) values 
+(510.00, 1),
+(616.00, 2),
+(419.90, 3);
 
 insert into produto_venda values (1, 1, 1), (1, 2, 2);
 insert into produto_venda values (2, 10, 1), (2, 11, 1), (2, 20, 2);
@@ -165,7 +165,7 @@ select * from produto_venda;
 
 create or replace view cliente_data as
 select
-
+    cl.id_cli ID,
     cl.cpf CPF,
     cl.nome_cli Nome,
     b.nome_bairro Bairro,
@@ -175,7 +175,7 @@ select
 
 from cliente cl
 join endereco e 
-on cl.cpf = e.cpf
+on cl.id_cli = e.id_cli
 join bairro b
 on b.id_bairro = e.id_bairro
 join regiao r
@@ -195,7 +195,7 @@ select
 
 from cliente cl
 join vendas v 
-on cl.cpf = v.cpf
+on cl.id_cli = v.id_cli
 join produto_venda pv
 on pv.id_pv_venda = v.id_venda 
 join produtos p
@@ -214,6 +214,7 @@ from categoria c
 join produtos p 
 on c.id_categoria = p.id_categoria;
 
+delete from cliente where id_cli = 4;
 
 select * from cliente_data;
 select * from info_venda;
