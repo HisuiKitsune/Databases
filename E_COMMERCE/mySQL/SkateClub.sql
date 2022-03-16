@@ -99,7 +99,7 @@ insert into endereco(cep, lgr, id_cli, id_bairro) values
 
 
 insert into categoria(nome_cat) values 
-("Boards"),
+("Shapes"),
 ("Vestuário"),
 ("Acessórios");
 

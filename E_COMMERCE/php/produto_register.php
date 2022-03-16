@@ -1,5 +1,6 @@
 <?php
 require_once('produto_crud.php');
+
 if (
     $_POST['txtnome_pro'] == NULL ||
     $_POST['txtvalor_pro'] == NULL ||
@@ -7,14 +8,13 @@ if (
     $_POST['txtid_categoria'] == NULL 
 ) {
     header('location: error.php?status=access-deny'); 
-    exit; 
+    die(); 
 }
 $produto = new stdClass();
     $produto->nome_pro = $_POST['txtnome_pro'];
     $produto->valor_pro = $_POST['txtvalor_pro'];
     $produto->qtd_pro = $_POST['txtqtd_pro'];
     $produto->id_categoria = $_POST['txtid_categoria'];
-
 
 
 if (addProduto($produto)) {

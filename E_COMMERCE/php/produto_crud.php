@@ -1,6 +1,6 @@
 <?php
 
-require_once './conexao_loja.php';
+require_once ('conexao_loja.php');
 
 function addProduto($produto)
 {
@@ -15,11 +15,33 @@ function addProduto($produto)
         $stmt->bindParam(":id_categoria", $produto->id_categoria);
 
         if ($stmt->execute())
-            echo "Produto Cadastrado com Sucesso";
+            return true;
     } catch (PDOException $error) {
-        echo "Erro no Cadastro. Erro: {$error->getMessage()}";
+            return false;
     } finally {
         unset($con);
         unset($stmt);
+    }
+}
+
+function listCategoria()
+{
+    try {
+        $con = connect();
+
+        $rs = $con->query("SELECT * FROM categoria");
+
+        $categorias = array();
+
+        while ($categoria = $rs->fetch(PDO::FETCH_OBJ)) {
+            array_push($categorias, $categoria);
+
+        }
+        return $categorias;
+    } catch (PDOException $error) {
+        echo "Erro ao listar as categorias. Erro: {$error->getMessage()}";
+    } finally {
+        unset($con);
+        unset($rs);
     }
 }
