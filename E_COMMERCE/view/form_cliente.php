@@ -1,5 +1,5 @@
 <?php
-    require_once ('../php/produto_crud.php');
+    require_once ('../php/endereco_crud.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,32 +10,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style-form.css">
-    <title>Formulário de Produtos</title>
+    <title>Formulário de Clientes</title>
 </head>
 <body>
     <?php include "../php/Navbar-menu.php" ?>
     <div class="container">
         <fieldset>
-            <h1>Registro de Produtos</h1>
-                <form action="../php/produto_register.php" method="POST">
+            <h1>Registro de Clientes</h1>
+                <form action="../php/cliente_register.php" method="POST">
                     <div class="form-group">
-                    <label for="nome">Nome do Produto</label>
-                    <input class="form-control" type="text" id="nomePro" name="txtnome_pro" placeholder="Ex: Lucky Seven Shape" required>
+                    <label for="nome">Nome do Cliente</label>
+                    <input class="form-control" type="text" id="nome_cliente" name="txtnome_cli" required>
                     </div>   
                     <div class="form-group">
-                    <label for="valor">Valor(R$)</label>
-                    <input class="form-control" type="text" id="valor" name="txtvalor_pro" placeholder="Ex: 100">
+                    <label for="cpf">CPF</label>
+                    <input class="form-control" type="text" id="cpf" name="txtcpf" required">
                     </div>  
                     <div class="form-group">
-                    <label for="unidades">Unidades</label>
-                    <input class="form-control" type="text" id="qtd" name="txtqtd_pro" placeholder="Ex: 1" required>
-                    </div>             
+                    <label for="cep">CEP</label>
+                    <input class="form-control" type="number" id="cep" name="txtcep" required>
+                    </div>
                     <div class="form-group">
-                    <label for="categoria" class="form-label">Categoria</label>
-                        <select class="form-control" aria-label="Selecione uma Categoria" name="txtid_categoria" id="categoria" required>
-                        <option selected disabled> Selecione uma categoria </option>
-                        <?php foreach (listCategoria() as $categoria) : ?>
-                        <option value="<?= $categoria->id_categoria ?>"><?= $categoria->nome_cat ?></option>
+                    <label for="lgr">Logradouro</label>
+                    <input class="form-control" type="number" id="lgr" name="txtlgr" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="bairro" class="form-label">Bairro</label>
+                        <select class="form-control" aria-label="Selecione um Bairro" name="txtid_bairro" id="bairro" required>
+                        <option selected disabled> Selecione um bairro </option>
+                        <?php foreach (listBairros() as $bairros) : ?>
+                        <option value="<?= $bairros->id_bairro ?>"><?= $bairros->nome_bairro ?></option>
                         <?php endforeach; ?>
                     </div>
                     </select>

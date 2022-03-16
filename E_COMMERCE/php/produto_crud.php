@@ -45,3 +45,25 @@ function listCategoria()
         unset($rs);
     }
 }
+
+function listProdutos()
+{
+    try {
+        $con = connect();
+
+        $rs = $con->query("SELECT * FROM produtos");
+
+        $produtos = array();
+
+        while ($produto = $rs->fetch(PDO::FETCH_OBJ)) {
+            array_push($produtos, $produto);
+
+        }
+        return $produtos;
+    } catch (PDOException $error) {
+        echo "Erro ao listar os Produtos. Erro: {$error->getMessage()}";
+    } finally {
+        unset($con);
+        unset($rs);
+    }
+}

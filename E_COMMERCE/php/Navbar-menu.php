@@ -42,21 +42,21 @@
         <div class="logo">Logo</div>
         <nav>
             <ul>
-                <li class="sub-menu"><a href="#">Produto</a>
+                <li class="sub-menu"><a href="#">Produtos</a>
                 <ul>
-                    <li><a href="#">Cadastrar</a></li>
+                    <li><a href="../view/form_produto.php">Cadastrar</a></li>
                     <li><a href="#">Listar</a></li>
                 </ul>
                 </li>             
-                <li class="sub-menu"><a href="#">Cliente</a>
+                <li class="sub-menu"><a href="#">Clientes</a>
                     <ul>
-                        <li><a href="#">Cadastrar</a></li>
+                        <li><a href="../view/form_cliente.php">Cadastrar</a></li>
                         <li><a href="#">Listar</a></li>
                     </ul>
                 </li>                
-                <li class="sub-menu"><a href="#">Venda</a>
+                <li class="sub-menu"><a href="#">Vendas</a>
                     <ul>
-                        <li><a href="#">Cadastrar</a></li>
+                        <li><a href="../view/form_vendas.php">Cadastrar</a></li>
                         <li><a href="#">Listar</a></li>
                     </ul>
                 </li>      
