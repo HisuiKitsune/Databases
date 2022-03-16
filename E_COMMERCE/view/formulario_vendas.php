@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/estilo_vendas.css">
 </head>
 <body>
+<?php include_once("../php/Navbar-menu.php"); ?>
     <form action="enviar-email.php" class="formulario" method="post"> 
         <p> Formulário de Vendas</p>
         <div class="field">

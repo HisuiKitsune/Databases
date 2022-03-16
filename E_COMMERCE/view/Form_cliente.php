@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/fEstilo.css">
 </head>
 <body>  
-
+<?php include_once("../php/Navbar-menu.php"); ?>
         <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
         <div>
             <h1 id="titulo">Faça Login</h1>
