@@ -1,12 +1,14 @@
 .container {
-  position: relative;
-  width: 100%;
-  padding: 30px;
-  margin: auto;
-  margin-top: 200px;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 h1 {
   text-align: center;
@@ -54,4 +56,37 @@ button.btn:hover {
   color: #051922;
   font-weight: bolder;
   font-size: 20px;
+}
+@media (max-width: 991px) {
+  .container {
+    position: absolute;
+    top: 36%;
+    left: 4%;
+    transform: none;
+    width: 400px;
+    padding: none;
+    background: none;
+    box-sizing: content-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  h1 {
+    display: none;
+  }
+  label {
+    font-size: 15px;
+    margin: 1px 0 1px 0;
+  }
+  .form-control {
+    border-right: 3px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  }
+  .form-control::placeholder {
+    font-size: 10px;
+  }
+  .container input {
+    border: none;
+    outline: none;
+  }
 }
