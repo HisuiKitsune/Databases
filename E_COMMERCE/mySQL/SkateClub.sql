@@ -165,7 +165,7 @@ select * from produto_venda;
 
 create or replace view cliente_data as
 select
-    cl.id_cli ID,
+    cl.id_cli,
     cl.cpf CPF,
     cl.nome_cli Nome,
     b.nome_bairro Bairro,
@@ -179,7 +179,8 @@ on cl.id_cli = e.id_cli
 join bairro b
 on b.id_bairro = e.id_bairro
 join regiao r
-on r.cod_regiao = b.cod_regiao;
+on r.cod_regiao = b.cod_regiao
+ORDER BY cl.id_cli;
 
 
 create or replace view info_venda as
@@ -199,7 +200,8 @@ on cl.id_cli = v.id_cli
 join produto_venda pv
 on pv.id_pv_venda = v.id_venda 
 join produtos p
-on p.id_pro = pv.id_pv_produto;
+on p.id_pro = pv.id_pv_produto
+ORDER BY v.id_venda;
 
 
 create or replace view info_produtos as
@@ -212,7 +214,9 @@ select
 
 from categoria c
 join produtos p 
-on c.id_categoria = p.id_categoria;
+on c.id_categoria = p.id_categoria
+ORDER BY c.nome_cat;
+
 
 delete from cliente where id_cli = 4;
 

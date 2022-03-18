@@ -51,7 +51,7 @@
                 <li class="sub-menu"><a href="#">Clientes</a>
                     <ul>
                         <li><a href="../view/form_cliente.php">Cadastrar</a></li>
-                        <li><a href="#">Listar</a></li>
+                        <li><a href="../view/cliente_list.php">Listar</a></li>
                     </ul>
                 </li>                
                 <li class="sub-menu"><a href="#">Vendas</a>

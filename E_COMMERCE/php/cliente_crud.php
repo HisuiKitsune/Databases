@@ -4,24 +4,23 @@ require_once 'conexao_loja.php';
 
 //----------------------------------------------------------------
 
-function addCliente($cliente, $endereco)
+function addCliente($cliente)
 {
     try {
         $con = connect();
 
-        $stmt = $con->prepare("INSERT INTO cliente(cpf, nome_cli) VALUES (:cpf, :nome_cli);");
+        $con->setAttribute(PDO::ATTR_EMULATE_PREPARES, 1);
+
+        $query = "INSERT INTO cliente(cpf, nome_cli) VALUES (:cpf, :nome_cli);";
+        $query .= "INSERT INTO endereco(cep, lgr, id_cli, id_bairro) VALUES (:cep, :lgr, last_insert_id(), :id_bairro);";
+
+        $stmt = $con->prepare($query);
 
         $stmt->bindParam(":cpf", $cliente->cpf);
         $stmt->bindParam(":nome_cli", $cliente->nome_cli);
-
-        $stmt->execute();
-        unset($stmt);
-
-        $stmt = $con->prepare("INSERT INTO endereco(cep, lgr, id_cli, id_bairro) VALUES (:cep, :lgr, last_insert_id(), :id_bairro);");
-
-        $stmt->bindParam(":cep", $endereco->cep);
-        $stmt->bindParam(":lgr", $endereco->lgr);
-        $stmt->bindParam(":id_bairro", $endereco->id_bairro);
+        $stmt->bindParam(":cep", $cliente->cep);
+        $stmt->bindParam(":lgr", $cliente->lgr);
+        $stmt->bindParam(":id_bairro", $cliente->id_bairro);
 
         if ($stmt->execute())
             echo "Cliente cadastrado com sucesso";
@@ -90,13 +89,13 @@ function find($nome)
 }
 
 
-function findByID($ID)
+function findByID($id_cli)
 {
     try {
         $con = connect();
 
-        $stmt = $con->prepare("SELECT * FROM cliente_data WHERE ID LIKE :ID");
-        $stmt->bindParam(":ID", $ID);
+        $stmt = $con->prepare("SELECT * FROM cliente_data WHERE id_cli LIKE :id_cli");
+        $stmt->bindParam(":id_cli", $id_cli);
 
         if($stmt->execute()) {
             if($stmt->rowCount() > 0) {
@@ -106,7 +105,7 @@ function findByID($ID)
             }
         }
     } catch (PDOException $error) {
-        echo "Erro ao buscar o Cliente pelo código: '{$ID}'. Erro: {$error->getMessage()}";
+        echo "Erro ao buscar o Cliente pelo código: '{$id_cli}'. Erro: {$error->getMessage()}";
     } finally {
         unset($con);
         unset($stmt);
@@ -116,25 +115,27 @@ function findByID($ID)
 //----------------------------------------------------------------
 
 
-function updateCliente($cliente, $endereco)
+function updateCliente($cliente)
 {
     try {
         $con = connect();
 
-        $stmt = $con->prepare("UPDATE cliente SET nome_cli = :nome_cli, cpf = :cpf WHERE id_cli = :id_cli");
+        $stmt = $con->prepare("UPDATE cliente SET nome_cli = :nome_cli, cpf = :cpf WHERE id_cli = :id_cli;");
 
         $stmt->bindParam(":id_cli", $cliente->id_cli);
-        $stmt->bindParam(":nome_cli", $cliente->nome_cli);
         $stmt->bindParam(":cpf", $cliente->cpf);
+        $stmt->bindParam(":nome_cli", $cliente->nome_cli);
 
         $stmt->execute();
         unset($stmt);
 
-        $stmt = $con->prepare("UPDATE endereco set cep = :cep, lgr = :lgr WHERE id_cli = last_insert_id()");
+        $stmt = $con->prepare("UPDATE endereco set cep = :cep, lgr = :lgr, id_bairro = :id_bairro WHERE id_cli = :id_cli;");
+        
+        $stmt->bindParam(":cep", $cliente->cep);
+        $stmt->bindParam(":lgr", $cliente->lgr);
+        $stmt->bindParam(":id_bairro", $cliente->id_bairro);
 
-        $stmt->bindParam(":cep", $endereco->cep);
-        $stmt->bindParam(":lgr", $endereco->lgr);
-
+ 
         if ($stmt->execute())
             return true;    
     } catch (PDOException $error) {
@@ -149,13 +150,13 @@ function updateCliente($cliente, $endereco)
 //----------------------------------------------------------------
 
 
-function delete($ID)
+function delete($id_cli)
 {
     try {
         $con = connect();
 
         $stmt = $con->prepare("DELETE FROM cliente WHERE id_cli = ?");
-        $stmt->bindParam(1, $ID);
+        $stmt->bindParam(1, $id_cli);
 
         if ($stmt->execute())
                 return true;
