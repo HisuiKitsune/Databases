@@ -24,7 +24,7 @@
                     </div>   
                     <div class="form-group">
                     <label for="cpf">CPF</label>
-                    <input class="form-control" type="text" id="cpf" name="txtcpf" required">
+                    <input class="form-control" type="text" id="cpf" name="txtcpf" required>
                     </div>  
                     <div class="form-group">
                     <label for="cep">CEP</label>
