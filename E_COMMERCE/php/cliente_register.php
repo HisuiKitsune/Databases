@@ -1,5 +1,5 @@
 <?php
-require_once('cliente_crud.php');
+require_once('./cliente_crud.php');
 if (
     $_POST['txtcpf'] == NULL ||
     $_POST['txtnome_cli'] == NULL ||
@@ -19,9 +19,10 @@ $cliente = new stdClass();
 
 
 if (addCliente($cliente)) {
-    header("location: ../view/cliente_list.php?status=success");
+    header("location: ../view/form_cliente_list.php?status=success");
     exit;
 } else{
-    header("location: ../view/cliente_list.php?status=fail");
+    header(var_dump(addCliente($cliente)));
     exit;
 }
+("location: ../view/form_cliente_list.php?status=fail");

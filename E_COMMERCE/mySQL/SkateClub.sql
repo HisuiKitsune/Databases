@@ -206,7 +206,7 @@ ORDER BY v.id_venda;
 
 create or replace view info_produtos as
 select
-
+    p.id_pro,
     c.nome_cat Categoria,
     p.nome_pro Produto,
     p.valor_pro Valor,
@@ -215,7 +215,7 @@ select
 from categoria c
 join produtos p 
 on c.id_categoria = p.id_categoria
-ORDER BY c.nome_cat;
+ORDER BY p.id_pro;
 
 
 delete from cliente where id_cli = 4;

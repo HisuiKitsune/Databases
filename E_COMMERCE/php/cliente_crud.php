@@ -23,9 +23,9 @@ function addCliente($cliente)
         $stmt->bindParam(":id_bairro", $cliente->id_bairro);
 
         if ($stmt->execute())
-            echo "Cliente cadastrado com sucesso";
+           return true;
     } catch (PDOException $error) {
-        echo "Erro no Cadastro. Erro: {$error->getMessage()}";
+            return false;
     } finally {
         unset($con);
         unset($stmt);
@@ -88,6 +88,8 @@ function find($nome)
     }
 }
 
+//----------------------------------------------------------------
+
 
 function findByID($id_cli)
 {
@@ -120,17 +122,16 @@ function updateCliente($cliente)
     try {
         $con = connect();
 
-        $stmt = $con->prepare("UPDATE cliente SET nome_cli = :nome_cli, cpf = :cpf WHERE id_cli = :id_cli;");
+        $con->setAttribute(PDO::ATTR_EMULATE_PREPARES, 1);
+
+        $query = "UPDATE cliente SET nome_cli = :nome_cli, cpf = :cpf WHERE id_cli = :id_cli;";
+        $query .= "UPDATE endereco set cep = :cep, lgr = :lgr, id_bairro = :id_bairro WHERE id_cli = :id_cli;";
+
+        $stmt = $con->prepare($query);
 
         $stmt->bindParam(":id_cli", $cliente->id_cli);
         $stmt->bindParam(":cpf", $cliente->cpf);
-        $stmt->bindParam(":nome_cli", $cliente->nome_cli);
-
-        $stmt->execute();
-        unset($stmt);
-
-        $stmt = $con->prepare("UPDATE endereco set cep = :cep, lgr = :lgr, id_bairro = :id_bairro WHERE id_cli = :id_cli;");
-        
+        $stmt->bindParam(":nome_cli", $cliente->nome_cli);    
         $stmt->bindParam(":cep", $cliente->cep);
         $stmt->bindParam(":lgr", $cliente->lgr);
         $stmt->bindParam(":id_bairro", $cliente->id_bairro);
