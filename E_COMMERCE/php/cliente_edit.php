@@ -19,9 +19,9 @@ $cliente = new stdClass();
 $result = updateCliente($cliente);
 
 if($result){
-    header("location: ../view/cliente_list.php?status=success");
+    header("location: ../view/form_cliente_list.php?status=success");
     exit;
 } else {
-    header("location: ../view/form_cliente_edit.php?status=fail");
+    header("location: ../view/form_cliente_edit.php?id_cli={$cliente->id_cli}&status=fail");
     exit;
 }

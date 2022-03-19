@@ -10,9 +10,9 @@ if ($_GET['id_cli'] == NULL) {
 $result = delete($_GET['id_cli']);
 
 if ($result) {
-    header("location: ../view/cliente_list.php?status=success");
+    header("location: ../view/form_cliente_list.php?status=success");
     die();
 }
 
-header("location: ../view/cliente_list.php?status=fail");
+header("location: ../view/form_cliente_list.php?status=fail");
 die();

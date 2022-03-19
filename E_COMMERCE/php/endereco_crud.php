@@ -25,31 +25,6 @@ function listBairros()
 
 //----------------------------------------------------------------
 
-
-function updateEndereco($endereco)
-{
-    try {
-        $con = connect();
-
-        $stmt = $con->prepare("UPDATE endereco set cep = :cep, lgr = :lgr WHERE id_cli = :last_insert_id();");
-        
-        $stmt->bindParam(":cep", $endereco->cep);
-        $stmt->bindParam(":lgr", $endereco->lgr);
-        $stmt->bindParam(":id_bairro", $endereco->id_bairro);
-
-        if ($stmt->execute())
-            return true;    
-    } catch (PDOException $error) {
-        return false;
-    } finally {
-        unset($con);
-        unset($stmt);
-    }
-}
-
-//----------------------------------------------------------------
-
-
 function findByIDe($id_endereco)
 {
     try {

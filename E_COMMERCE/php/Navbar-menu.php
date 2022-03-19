@@ -45,19 +45,19 @@
                 <li class="sub-menu"><a href="#">Produtos</a>
                 <ul>
                     <li><a href="../view/form_produto.php">Cadastrar</a></li>
-                    <li><a href="#">Listar</a></li>
+                    <li><a href="../view/form_produto_list.php">Listar</a></li>
                 </ul>
                 </li>             
                 <li class="sub-menu"><a href="#">Clientes</a>
                     <ul>
                         <li><a href="../view/form_cliente.php">Cadastrar</a></li>
-                        <li><a href="../view/cliente_list.php">Listar</a></li>
+                        <li><a href="../view/form_cliente_list.php">Listar</a></li>
                     </ul>
                 </li>                
                 <li class="sub-menu"><a href="#">Vendas</a>
                     <ul>
                         <li><a href="../view/form_vendas.php">Cadastrar</a></li>
-                        <li><a href="#">Listar</a></li>
+                        <li><a href="../view/form_vendas_list.php">Listar</a></li>
                     </ul>
                 </li>      
                 <li><a class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>

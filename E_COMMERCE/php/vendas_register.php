@@ -1,5 +1,6 @@
 <?php
-require_once('vendas_crud.php');
+require_once('./vendas_crud.php');
+require_once('./cliente_crud.php');
 
 if (
     $_POST['txtvalor_ven'] == NULL ||
@@ -13,16 +14,14 @@ if (
 $vendas = new stdClass();
     $vendas->valor_ven = $_POST['txtvalor_ven'];
     $vendas->id_cli = $_POST['txtid_cli'];
-
-$pv = new stdClass();
-    $pv->id_pv_produto = $_POST['txtid_pv_produto'];
-    $pv->qnt_venda = $_POST['txtqnt_venda'];
+    $vendas->id_pv_produto = $_POST['txtid_pv_produto'];
+    $vendas->qnt_venda = $_POST['txtqnt_venda'];
 
 
 if (addVendas($vendas, $pv)) {
-    header("location: vendas_list.php?status=success");
+    header("location: ../view/form_vendas_list.php?status=success");
     exit;
 } else{
-    header("location: vendas_list.php?status=fail");
+    header("location: ../view/form_vendas.php?status=fail");
     exit;
 }
