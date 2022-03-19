@@ -2,20 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url(../img/Background.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1000;
 }
 .container {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -15%);
+  display: block;
+  margin: auto;
+  margin-top: 160px;
+  margin-bottom: 50px;
   width: 500px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  padding-top: 15px;
   background: rgba(0, 0, 0, 0.8);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);

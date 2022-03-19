@@ -42,6 +42,7 @@
         <div class="logo">Logo</div>
         <nav>
             <ul>
+            <li><a href="../php/cleaner.php" onclick="return confirm('Limpar Tabelas? Produtos será ignorada')"><i class="fa-solid fa-trash-can"></i></a></li>
                 <li class="sub-menu"><a href="#">Produtos</a>
                 <ul>
                     <li><a href="../view/form_produto.php">Cadastrar</a></li>

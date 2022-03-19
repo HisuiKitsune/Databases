@@ -50,9 +50,9 @@ body {
   cursor: pointer;
 }
 .search-icon {
-  background: #f28123;
   cursor: pointer;
 }
+
 header {
   position: absolute;
   top: 0;
@@ -114,11 +114,28 @@ header nav ul li a {
   text-decoration: none;
   display: block;
 }
+header nav ul li a.search-icon{
+  color: #f28123;
+}
+
+header nav ul li a.search-icon:hover,
+header nav ul li a.search-icon.active{
+  color: #fff;
+  background: #f28123;
+
+}
 header nav ul li a:hover,
 header nav ul li a.active {
   color: #fff;
   background: #f28123;
 }
+header nav ul li a i:hover,
+header nav ul li a i.active {
+  color: #fff;
+  background: #f28123;
+}
+
+
 .menu-toggle {
   color: #fff;
   float: right;
