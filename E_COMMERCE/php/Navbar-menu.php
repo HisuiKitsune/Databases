@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class="logo">Logo</div>
+        <div class="logo"><img src="../view/assets/img/logo P.png" width="50px">SkateClub</div>
         <nav>
             <ul>
             <li><a href="../php/cleaner.php" onclick="return confirm('Limpar Tabelas? Produtos será ignorada')"><i class="fa-solid fa-trash-can"></i></a></li>
