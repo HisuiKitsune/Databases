@@ -82,9 +82,25 @@ values  ('Zona Sul'),
 
 insert into bairro(nome_bairro, cod_regiao) 
 values  ('Campo Grande', 3),
+        ('Jardim Sulacap', 3),
+        ('Realengo', 3),
+        ('Jacarepaguá', 3),
+        ('Recreio dos Bandeirantes', 3),
         ('Alto da Boa Vista', 2),
+        ('Tijuca', 2),
+        ('Maracanã', 2),
+        ('Riachuelo', 2),
+        ('Méier', 2),
         ('São Conrado', 1),
-        ('Estácio', 4);
+        ('Botafogo', 1),
+        ('Catete', 1),
+        ('Copacabana', 1),
+        ('Laranjeiras', 1),
+        ('Estácio', 4),
+        ('Benfica', 4),
+        ('Caju', 4),
+        ('Catumbi', 4),
+        ('Rio Comprido', 4);
 
 insert into cliente(cpf, nome_cli) values
 ('17109786781', 'Breno'),
@@ -117,7 +133,7 @@ insert into produtos(nome_pro, valor_pro, qtd_pro, id_categoria) values
 ("Shape MotorHead 'Ace of Spades'", 299.90, 25, 1),
 ("Shape Millencolin 'Plate'", 250.90, 27, 1),
 ("Camisa Trasher", 189.90, 80, 2),
-("Camisa Collci Skate", 159.90, 55, 2),
+("Camisa Colcci Skate", 159.90, 55, 2),
 ("Camisa Urgh Skate", 135.00, 62, 2),
 ("Boné Trasher Preto", 55.00, 66, 2),
 ("Camisa SK8 Branca", 90.00, 50, 2),
@@ -223,3 +239,4 @@ delete from cliente where id_cli = 4;
 select * from cliente_data;
 select * from info_venda;
 select * from info_produtos;
+

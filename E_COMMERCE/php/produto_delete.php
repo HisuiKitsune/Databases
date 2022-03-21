@@ -10,9 +10,9 @@ if ($_GET['id_pro'] == NULL) {
 $result = deleteProduto($_GET['id_pro']);
 
 if ($result) {
-    header("location: ../view/form_produto_list.php?status=success");
+    header("location: ../view/form_produto_list.php?delete=success");
     die();
 }
 
-header("location: ../view/form_produto_edit.php?{$produto->id_pro}&status=fail");
+header("location: ../view/form_produto_edit.php?{$produto->id_pro}&delete=fail");
 die();

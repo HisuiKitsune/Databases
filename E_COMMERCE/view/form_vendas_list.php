@@ -17,7 +17,7 @@
 
 <body>
     <?php include "../php/Navbar-menu.php" ?>
-    <div class="container">
+    <div class="container-xxl">
     <table class="table table-borderless table-hover">
             <thead>
                 <th>Venda</th>
@@ -47,6 +47,57 @@
             </tbody>
         </table>
     </div>
+
+    <?php if(isset($_GET['status']) && $_GET['status'] != NULL) : ?>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+    <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="false">
+        <div class="toast-header">
+            <strong class="me-auto">Venda</strong>
+            <small>Cadastro</small>
+            <button type="button" class="btn-close btn-light" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Cadastrada com sucesso
+        </div>
+    </div>
+</div>
+
+<script>
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+    var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+    });
+
+    toastList.forEach(toast => toast.show());
+</script>
+
+<?php endif; ?>
+
+<?php if(isset($_GET['delete']) && $_GET['delete'] != NULL) : ?>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+    <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="false">
+        <div class="toast-header">
+            <strong class="me-auto">Venda</strong>
+            <small>Delete</small>
+            <button type="button" class="btn-close btn-light" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Deletada com sucesso
+        </div>
+    </div>
+</div>
+
+<script>
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+    var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+    });
+
+    toastList.forEach(toast => toast.show());
+</script>
+
+<?php endif; ?>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

@@ -29,7 +29,7 @@
                     <div class="form-group">
                     <label for="cliente" class="form-label">Cliente</label>
                         <select class="form-control" aria-label="Selecione o Cliente" name="txtid_cli" id="cliente" required>
-                        <option selected disabled> Selecione o cliente</option>
+                        <option value="<?= $vendas->Nome ?>"><?= $vendas->Nome ?></option>
                         <?php foreach (listCliente() as $clientes) : ?>
                         <option value="<?= $clientes->id_cli ?>"><?= $clientes->Nome ?></option>
                         <?php endforeach; ?>
@@ -37,7 +37,7 @@
                     </select>
                     <label for="id_pro" class="form-label">ID do Produto</label>
                         <select class="form-control" aria-label="Selecione o Produto" name="txtid_pv_produto" id="cliente" required>
-                        <option selected disabled> Selecione um Produto </option>
+                        <option value="<?= $vendas->Produto ?>"><?= $vendas->Produto ?></option>
                         <?php foreach (listProdutos() as $produtos) : ?>
                         <option value="<?= $produtos->id_pro ?>"><?= $produtos->Produto ?></option>
                         <?php endforeach; ?>

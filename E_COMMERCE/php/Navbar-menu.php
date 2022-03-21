@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Responsive Bootstrap4 Shop Template, Criado por Team Senac First Craker's">
+    <meta name="description" content="Responsive Bootstrap4 Shop Template, Criado por Team Senac First Cracker's">
 
     <title>Navbar-menu</title>
     <!-- favicon -->
@@ -39,7 +39,9 @@
                 </div>
             </div>
         </div>
-        <div class="logo"><img src="../view/assets/img/logo P.png" width="50px">SkateClub</div>
+        <div class="logo">
+            <a style="font-family: Open-sans; color: #F28123; font-decoration: none;"href="../view/index.php">
+            <img src="../view/assets/img/logo P.png" width="50px">SkateClub</a></div>
         <nav>
             <ul>
             <li><a href="../php/cleaner.php" onclick="return confirm('Limpar Tabelas? Produtos será ignorada')"><i class="fa-solid fa-trash-can"></i></a></li>
@@ -62,7 +64,10 @@
                     </ul>
                 </li>      
                 <li><a class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
-                </a></li>           
+                </a></li>
+                <li>
+                    <a href="../view/logoff.html" onclick="return confirm('Deseja Sair?')"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
             </ul>      
             <div style="clear:both"></div>      
         </nav>

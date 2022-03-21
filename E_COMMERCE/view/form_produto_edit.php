@@ -35,7 +35,7 @@
                     <div class="form-group">
                     <label for="categoria" class="form-label">Categoria</label>
                         <select class="form-control" aria-label="Selecione uma Categoria" name="txtid_categoria" id="categoria" required>
-                        <option selected disabled> Selecione uma categoria </option>
+                        <option value="<?= $produtos->Categoria ?>"><?= $produtos->Categoria ?></option>
                         <?php foreach (listCategoria() as $categoria) : ?>
                         <option value="<?= $categoria->id_categoria ?>"><?= $categoria->nome_cat ?></option>
                         <?php endforeach; ?>

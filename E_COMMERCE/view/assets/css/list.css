@@ -3,19 +3,18 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-.container {
-  display: block;
+.container,
+  .container-xxl{
   margin: auto;
   margin-top: 160px;
   margin-bottom: 50px;
-  width: 500px;
   padding-bottom: 5px;
   padding-top: 15px;
   background: rgba(0, 0, 0, 0.8);
-  box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
+
 .table {
   background: rgba(255, 255, 255, 0.2);
   border-right: 10px solid rgba(255, 255, 255, 0.2);
@@ -25,12 +24,17 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  color:#f28123;
+}
+
 th {
   color: #f28123;
   font-family: sans-serif;
   font-size: large;
   font-weight: 600;
   margin: 10px 0 10px 0;
+  
 }
 td {
   color: #fff;
@@ -38,4 +42,13 @@ td {
   font-size: large;
   font-weight: 600;
   margin: 10px 0 10px 0;
+}
+
+div.toast{
+  background-color: #595959;
+  color: white;
+}
+div.toast-header{
+  background-color: black;
+  color: #f28123;
 }
