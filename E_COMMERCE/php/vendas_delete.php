@@ -10,9 +10,9 @@ if ($_GET['id_venda'] == NULL) {
 $result = deleteVenda($_GET['id_venda']);
 
 if ($result) {
-    header("location: ../view/form_vendas_list.php?status=success");
+    header("location: ../view/form_vendas_list.php?delete=success");
     die();
 }
 
-header("location: ../view/form_vendas_edit.php?{$vendas->id_venda}&status=fail");
+header("location: ../view/form_vendas_edit.php?{$vendas->id_venda}&delete=fail");
 die();

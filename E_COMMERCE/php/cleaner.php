@@ -9,10 +9,14 @@ function deleteAll()
 
             $con->setAttribute(PDO::ATTR_EMULATE_PREPARES, 1);
 
-            $query = "DELETE FROM endereco;";
+            $query =  "DELETE FROM endereco;";
             $query .= "DELETE FROM produto_venda;";
             $query .= "DELETE FROM vendas;";
             $query .= "DELETE FROM cliente;";
+            $query .= "ALTER TABLE endereco AUTO_INCREMENT = 1;";
+            $query .= "ALTER TABLE produto_venda AUTO_INCREMENT = 1;";
+            $query .= "ALTER TABLE vendas AUTO_INCREMENT = 1;";
+            $query .= "ALTER TABLE cliente AUTO_INCREMENT = 1;";
 
             $stmt = $con->prepare($query);
 
@@ -27,8 +31,8 @@ function deleteAll()
 }
 
 if (deleteAll()) {
-   header('location: ../view/index.php?status=sucess');
+   header('location: ../view/index.php?sucess=clear');
     die();
 }
-   header('location: ../view/index.php?status=sucess');
+   header('location: ../view/index.php?fail=clear');
     die();

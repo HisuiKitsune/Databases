@@ -28,11 +28,11 @@
                     </div>  
                     <div class="form-group">
                     <label for="cep">CEP</label>
-                    <input class="form-control" type="number" id="cep" name="txtcep" required>
+                    <input class="form-control" type="text" id="cep" name="txtcep" required>
                     </div>
                     <div class="form-group">
                     <label for="lgr">Logradouro</label>
-                    <input class="form-control" type="number" id="lgr" name="txtlgr" required>
+                    <input class="form-control" type="text" id="lgr" name="txtlgr" required>
                     </div>
                     <div class="form-group">
                     <label for="bairro" class="form-label">Bairro</label>

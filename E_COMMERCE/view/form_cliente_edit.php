@@ -30,7 +30,7 @@
                     </div>  
                     <div class="form-group">
                     <label for="cep">CEP</label>
-                    <input class="form-control" value="<?= $cliente->CEP?>" type="number" id="cep" name="txtcep" required>
+                    <input class="form-control" value="<?= $cliente->CEP?>" type="text" id="cep" name="txtcep" required>
                     </div>
                     <div class="form-group">
                     <label for="lgr">Logradouro</label>
@@ -39,7 +39,7 @@
                     <div class="form-group">
                     <label for="bairro" class="form-label">Bairro</label>
                         <select class="form-control" aria-label="Selecione um Bairro" name="txtid_bairro" id="bairro" required>
-                        <option selected disabled> Selecione um bairro </option>
+                        <option value="<?= $cliente->Bairro?>"><?= $cliente->Bairro?></option>
                         <?php foreach (listBairros() as $bairros) : ?>
                         <option value="<?= $bairros->id_bairro ?>"><?= $bairros->nome_bairro ?></option>
                         <?php endforeach; ?>
